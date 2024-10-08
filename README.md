@@ -69,7 +69,13 @@ Example Response: How long have you been sad?
 
 Please note that this is a simplified version of the chatbot, and the original bot had a much more complex algorithm behind it.
 
-There will be two tables to store all the logic of the bot:
+There will be two tables to store all the logic of the bot: Reflection Table, Response Table
 
-Reflection Table
-Response Table
+
+In the second part of the project, we will be giving the chatbot some emotional intelligence. This will be done by training a simple emotion classification model. We will then use this model to classify the sentiment of the user's input and respond accordingly.\
+\
+How our logic will work is as follows:
+1. If there is a match in the response table, we will use the response from the table.
+2. If there is no match, we will classify the emotion of the input and respond accordingly.
+
+The model we will use is a simple Naive Bayes Classifier. This is a simple model that works well with text data. We will be using the `scikit-learn` library to train the model, and the huggingface `datasets` library to get the data.
